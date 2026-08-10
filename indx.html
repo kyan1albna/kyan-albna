@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- بيانات محركات البحث (SEO) -->
+    <meta name="description" content="شركة كيان البناء للمقاولات العامة والتطوير العقاري - تنفيذ أعمال البناء، الترميم، التجديد، الهناجر، العوازل والمظلات مع ضمان 10 سنوات.">
+    <meta name="keywords" content="شركة, مقاولات, مقاولة, مقاول, تطوير عقاري, ترميم, اعمال, تجديد, مقاول عام, بناء عظم, تسليم مفتاح, تركيب مظلات, سواتر, عوازل اسطح, بناء هناجر, كيان البناء">
+    
+    <title>شركة كيان البناء للمقاولات العامة والتطوير العقاري</title>
+    
+    <!-- Bootstrap 5 RTL CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    
+    <!-- Google Fonts (Tajawal) -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Fancybox CSS (لتكبير الصور) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background: #F9F8F6;
+            color: #333;
+        }
+        
+        /* Header & Logo */
+        .hero-section {
+            background-color: #fff;
+            padding: 20px 15px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border-bottom: 4px solid #B89355;
+        }
+        
+        .company-logo-wrapper {
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .company-logo {
+            max-width: 85px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        @media (min-width: 768px) {
+            .company-logo {
+                max-width: 120px; 
+            }
+        }
+        
+        .company-logo:hover {
+            transform: scale(1.05);
+        }
+        
+        .company-title {
+            color: #4A3525;
+            font-weight: 800;
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+        
+        /* Navigation Tabs */
+        .nav-tabs-custom {
+            background: #fff;
+            padding: 10px;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .nav-tabs-custom .nav-link {
+            color: #4A3525;
+            font-weight: 700;
+            border-radius: 50px;
+            padding: 10px 25px;
+            transition: all 0.3s ease;
+            border: none;
+        }
+        .nav-tabs-custom .nav-link:hover {
+            background-color: rgba(184, 147, 85, 0.15); 
+        }
+        .nav-tabs-custom .nav-link.active {
+            background-color: #4A3525;
+            color: #fff;
+            box-shadow: 0 4px 10px rgba(74, 53, 37, 0.3);
+        }
+
+        /* Section Titles */
+        .section-title {
+            color: #4A3525;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: #B89355;
+            border-radius: 2px;
+        }
+        
+        /* About Section */
+        .about-box {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            line-height: 1.9;
+            font-size: 1.2rem;
+            text-align: justify;
+            border-right: 5px solid #4A3525;
+        }
+
+        /* Accordion */
+        .accordion-item {
+            border: none;
+            border-radius: 15px !important;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+        .accordion-button {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #4A3525;
+            background-color: #fff;
+            padding: 20px;
+        }
+        .accordion-button:not(.collapsed) {
+            color: #fff;
+            background-color: #4A3525;
+            box-shadow: inset 0 -1px 0 rgba(0,0,0,.125);
+        }
+        .accordion-button::after {
+            margin-right: auto;
+            margin-left: 0;
+        }
+        .accordion-body {
+            background-color: #fff;
+            padding: 20px;
+        }
+
+        /* Gallery Images */
+        .gallery-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .gallery-img:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(184, 147, 85, 0.4);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: #4A3525;
+            color: #fff;
+            padding: 50px 15px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        .contact-section .section-title {
+            color: #fff;
+        }
+        .contact-section .section-title::after {
+            background-color: #B89355;
+        }
+        .contact-info {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .whatsapp-link {
+            color: #25D366;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 1.5rem;
+            display: inline-block;
+            margin-top: 10px;
+            transition: transform 0.3s;
+        }
+        .whatsapp-link:hover {
+            transform: scale(1.1);
+            color: #25D366;
+        }
+        .form-control {
+            border-radius: 10px;
+            padding: 15px;
+            border: 1px solid #ddd;
+        }
+        .form-control:focus {
+            border-color: #B89355;
+            box-shadow: 0 0 0 0.25rem rgba(184, 147, 85, 0.25);
+        }
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: #fff;
+            font-weight: bold;
+            padding: 12px 30px;
+            border-radius: 10px;
+            border: none;
+            width: 100%;
+            transition: background 0.3s;
+        }
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+            color: #fff;
+        }
+
+        /* زر واتساب العائم (تم تعديله للصورة) */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 25px;
+            left: 25px; 
+            width: 60px;
+            height: 60px;
+            border-radius: 50%; /* لجعل الحواف دائرية */
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+            overflow: hidden; /* لقص الزوائد المربعة للصورة */
+            background-color: #fff;
+        }
+        
+        .floating-whatsapp img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* لملئ المساحة الدائرية بالكامل */
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+            box-shadow: 2px 4px 15px rgba(0,0,0,0.4);
+        }
+
+        /* Footer & Developer Credits */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: #fff;
+            color: #6c757d;
+            font-size: 0.95rem;
+            border-top: 1px solid #eee;
+            margin-top: 20px;
+        }
+        .developer-credits {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px dashed #ddd;
+            display: inline-block;
+            text-align: center;
+            line-height: 1.8;
+        }
+        .developer-credits span {
+            color: #4A3525;
+            font-weight: bold;
+        }
+        .developer-credits a {
+            color: #B89355;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+            direction: ltr;
+            display: inline-block;
+        }
+        .developer-credits a:hover {
+            color: #4A3525;
+            text-decoration: underline;
+        }
+        .social-icon {
+            font-size: 1.1rem;
+            margin-left: 5px;
+            color: #4A3525;
+        }
+        /* تحسين زر الاتصال ليتناسب مع الهوية */
+        .modal-call-btn {
+            background-color: #B89355;
+            color: white;
+            border: none;
+        }
+        .modal-call-btn:hover {
+            background-color: #9a7945;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <section class="hero-section">
+        <div class="container">
+            <a href="https://i.postimg.cc/bvYMzJsq/IMG-20260804-WA0046.jpg" data-fancybox="logo" class="company-logo-wrapper">
+                <img src="https://i.postimg.cc/bvYMzJsq/IMG-20260804-WA0046.jpg" alt="شعار شركة كيان البناء" class="company-logo" loading="lazy">
+            </a>
+            <h1 class="company-title">شركة كيان البناء</h1>
+            <p class="text-muted h5">للمقاولات العامة والتطوير العقاري</p>
+        </div>
+    </section>
+
+    <div class="container">
+        
+        <!-- Navigation Menu -->
+        <ul class="nav nav-pills nav-tabs-custom" id="mainTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="about-tab" data-bs-toggle="pill" data-bs-target="#about" type="button" role="tab">من نحن</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="portfolio-tab" data-bs-toggle="pill" data-bs-target="#portfolio" type="button" role="tab">أعمالنا</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="contact-tab" data-bs-toggle="pill" data-bs-target="#contact" type="button" role="tab">للتواصل معنا</button>
+            </li>
+        </ul>
+
+        <!-- Tab Contents -->
+        <div class="tab-content" id="mainTabsContent">
+            
+            <!-- القسم الأول: من نحن -->
+            <div class="tab-pane fade show active" id="about" role="tabpanel">
+                <h2 class="section-title">من نحن</h2>
+                <div class="about-box">
+                    شركة كيان البناء للمقاولات العامة، إنشاء مباني عظم تسليم مفتاح، إنشاء هناجر ومستودعات عظم وتسليم مفتاح، وجميع أعمال المظلات والسواتر، الجلسات الشتوية، وأعمال السندويش بنل بأنواعه، وأعمال الدهانات الخارجية والداخلية، وأعمال بروفايل، وأعمال عوازل مائية وتسريبات المياه وعاكس الحرارة. 
+                    <br> <strong class="text-danger mt-3 d-block"><i class="fa-solid fa-shield-halved"></i> ضماننا عشر سنوات.</strong>
+                </div>
+            </div>
+
+            <!-- القسم الثاني: أعمالنا -->
+            <div class="tab-pane fade" id="portfolio" role="tabpanel">
+                <h2 class="section-title">أعمالنا</h2>
+
+                <div class="accordion" id="portfolioAccordion">
+                    
+                    <!-- 1. ترميم وتجديد من الصفر -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false">
+                                1- ترميم وتجديد من الصفر
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#portfolioAccordion">
+                            <div class="accordion-body">
+                                
+                                <h5 class="text-secondary mb-3"><i class="fa-solid fa-clock-rotate-left"></i> قبل التنفيذ:</h5>
+                                <div class="row justify-content-center">
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/gjgNJy5Z/IMG-20260804-WA0016.jpg" data-fancybox="gallery1-before"><img src="https://i.postimg.cc/gjgNJy5Z/IMG-20260804-WA0016.jpg" class="gallery-img" alt="ترميم قبل التنفيذ - كيان البناء" loading="lazy"></a></div>
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/qq1jRcY6/IMG-20260804-WA0013.jpg" data-fancybox="gallery1-before"><img src="https://i.postimg.cc/qq1jRcY6/IMG-20260804-WA0013.jpg" class="gallery-img" alt="ترميم قبل التنفيذ - كيان البناء" loading="lazy"></a></div>
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/ZnwVRPgN/IMG-20260804-WA0010.jpg" data-fancybox="gallery1-before"><img src="https://i.postimg.cc/ZnwVRPgN/IMG-20260804-WA0010.jpg" class="gallery-img" alt="ترميم قبل التنفيذ - كيان البناء" loading="lazy"></a></div>
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/gjgNJy56/IMG-20260804-WA0017.jpg" data-fancybox="gallery1-before"><img src="https://i.postimg.cc/gjgNJy56/IMG-20260804-WA0017.jpg" class="gallery-img" alt="ترميم قبل التنفيذ - كيان البناء" loading="lazy"></a></div>
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/D0xBZQDc/IMG-20260804-WA0014.jpg" data-fancybox="gallery1-before"><img src="https://i.postimg.cc/D0xBZQDc/IMG-20260804-WA0014.jpg" class="gallery-img" alt="ترميم قبل التنفيذ - كيان البناء" loading="lazy"></a></div>
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/WzN5TY9P/IMG-20260804-WA0009.jpg" data-fancybox="gallery1-before"><img src="https://i.postimg.cc/WzN5TY9P/IMG-20260804-WA0009.jpg" class="gallery-img" alt="ترميم قبل التنفيذ - كيان البناء" loading="lazy"></a></div>
+                                </div>
+
+                                <hr>
+
+                                <h5 class="text-success mt-4 mb-3"><i class="fa-solid fa-check-circle"></i> بعد التنفيذ:</h5>
+                                <div class="row justify-content-center">
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/yYJFcz3G/IMG-20260804-WA0001.jpg" data-fancybox="gallery1-after"><img src="https://i.postimg.cc/yYJFcz3G/IMG-20260804-WA0001.jpg" class="gallery-img" alt="ترميم وتجديد بعد التنفيذ - كيان البناء" loading="lazy"></a></div>
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/hPJ9Tq7D/IMG-20260804-WA0000.jpg" data-fancybox="gallery1-after"><img src="https://i.postimg.cc/hPJ9Tq7D/IMG-20260804-WA0000.jpg" class="gallery-img" alt="ترميم وتجديد بعد التنفيذ - كيان البناء" loading="lazy"></a></div>
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/Nfy1mwrj/IMG-20260804-WA0002.jpg" data-fancybox="gallery1-after"><img src="https://i.postimg.cc/Nfy1mwrj/IMG-20260804-WA0002.jpg" class="gallery-img" alt="ترميم وتجديد بعد التنفيذ - كيان البناء" loading="lazy"></a></div>
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/WbDMgPJR/IMG-20260804-WA0003.jpg" data-fancybox="gallery1-after"><img src="https://i.postimg.cc/WbDMgPJR/IMG-20260804-WA0003.jpg" class="gallery-img" alt="ترميم وتجديد بعد التنفيذ - كيان البناء" loading="lazy"></a></div>
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/QxBp1rWM/IMG-20260804-WA0004.jpg" data-fancybox="gallery1-after"><img src="https://i.postimg.cc/QxBp1rWM/IMG-20260804-WA0004.jpg" class="gallery-img" alt="ترميم وتجديد بعد التنفيذ - كيان البناء" loading="lazy"></a></div>
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/RV3cKznC/IMG-20260804-WA0005.jpg" data-fancybox="gallery1-after"><img src="https://i.postimg.cc/RV3cKznC/IMG-20260804-WA0005.jpg" class="gallery-img" alt="ترميم وتجديد بعد التنفيذ - كيان البناء" loading="lazy"></a></div>
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/pX9Dzt5g/IMG-20260804-WA0006.jpg" data-fancybox="gallery1-after"><img src="https://i.postimg.cc/pX9Dzt5g/IMG-20260804-WA0006.jpg" class="gallery-img" alt="ترميم وتجديد بعد التنفيذ - كيان البناء" loading="lazy"></a></div>
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/DyWqLK49/IMG-20260804-WA0007.jpg" data-fancybox="gallery1-after"><img src="https://i.postimg.cc/DyWqLK49/IMG-20260804-WA0007.jpg" class="gallery-img" alt="ترميم وتجديد بعد التنفيذ - كيان البناء" loading="lazy"></a></div>
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/PqNpsWzn/IMG-20260804-WA0040.jpg" data-fancybox="gallery1-after"><img src="https://i.postimg.cc/PqNpsWzn/IMG-20260804-WA0040.jpg" class="gallery-img" alt="ترميم وتجديد بعد التنفيذ - كيان البناء" loading="lazy"></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. عوازل السطوح -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false">
+                                2- عوازل السطوح
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#portfolioAccordion">
+                            <div class="accordion-body">
+                                <div class="row justify-content-center">
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/YCHzHsjd/IMG-20260804-WA0015.jpg" data-fancybox="gallery2"><img src="https://i.postimg.cc/YCHzHsjd/IMG-20260804-WA0015.jpg" class="gallery-img" alt="أعمال عوازل السطوح - كيان البناء" loading="lazy"></a></div>
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/Qd3J3yV4/IMG-20260804-WA0008.jpg" data-fancybox="gallery2"><img src="https://i.postimg.cc/Qd3J3yV4/IMG-20260804-WA0008.jpg" class="gallery-img" alt="أعمال عوازل السطوح - كيان البناء" loading="lazy"></a></div>
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/CxgsgQdr/IMG-20260804-WA0011.jpg" data-fancybox="gallery2"><img src="https://i.postimg.cc/CxgsgQdr/IMG-20260804-WA0011.jpg" class="gallery-img" alt="أعمال عوازل السطوح - كيان البناء" loading="lazy"></a></div>
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/K82D2H4H/IMG-20260804-WA0012.jpg" data-fancybox="gallery2"><img src="https://i.postimg.cc/K82D2H4H/IMG-20260804-WA0012.jpg" class="gallery-img" alt="أعمال عوازل السطوح - كيان البناء" loading="lazy"></a></div>
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/SK5XynD4/IMG-20260804-WA0021.jpg" data-fancybox="gallery2"><img src="https://i.postimg.cc/SK5XynD4/IMG-20260804-WA0021.jpg" class="gallery-img" alt="أعمال عوازل السطوح - كيان البناء" loading="lazy"></a></div>
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/6QS798YB/IMG-20260804-WA0018.jpg" data-fancybox="gallery2"><img src="https://i.postimg.cc/6QS798YB/IMG-20260804-WA0018.jpg" class="gallery-img" alt="أعمال عوازل السطوح - كيان البناء" loading="lazy"></a></div>
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/VN5rQqB5/IMG-20260804-WA0019.jpg" data-fancybox="gallery2"><img src="https://i.postimg.cc/VN5rQqB5/IMG-20260804-WA0019.jpg" class="gallery-img" alt="أعمال عوازل السطوح - كيان البناء" loading="lazy"></a></div>
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/bvMGzZ3S/IMG-20260804-WA0031.jpg" data-fancybox="gallery2"><img src="https://i.postimg.cc/bvMGzZ3S/IMG-20260804-WA0031.jpg" class="gallery-img" alt="أعمال عوازل السطوح - كيان البناء" loading="lazy"></a></div>
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/FKqf9YDF/IMG-20260804-WA0032.jpg" data-fancybox="gallery2"><img src="https://i.postimg.cc/FKqf9YDF/IMG-20260804-WA0032.jpg" class="gallery-img" alt="أعمال عوازل السطوح - كيان البناء" loading="lazy"></a></div>
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/wBPt6106/IMG-20260804-WA0027.jpg" data-fancybox="gallery2"><img src="https://i.postimg.cc/wBPt6106/IMG-20260804-WA0027.jpg" class="gallery-img" alt="أعمال عوازل السطوح - كيان البناء" loading="lazy"></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. المظلات -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false">
+                                3- المظلات
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#portfolioAccordion">
+                            <div class="accordion-body">
+                                <div class="row justify-content-center">
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/nL5sHX0z/IMG-20260804-WA0020.jpg" data-fancybox="gallery3"><img src="https://i.postimg.cc/nL5sHX0z/IMG-20260804-WA0020.jpg" class="gallery-img" alt="أعمال المظلات والسواتر - كيان البناء" loading="lazy"></a></div>
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/zfMLJy0g/IMG-20260804-WA0022.jpg" data-fancybox="gallery3"><img src="https://i.postimg.cc/zfMLJy0g/IMG-20260804-WA0022.jpg" class="gallery-img" alt="أعمال المظلات والسواتر - كيان البناء" loading="lazy"></a></div>
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/5tjYdB5G/IMG-20260804-WA0023.jpg" data-fancybox="gallery3"><img src="https://i.postimg.cc/5tjYdB5G/IMG-20260804-WA0023.jpg" class="gallery-img" alt="أعمال المظلات والسواتر - كيان البناء" loading="lazy"></a></div>
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/TPSyRKCy/IMG-20260804-WA0024.jpg" data-fancybox="gallery3"><img src="https://i.postimg.cc/TPSyRKCy/IMG-20260804-WA0024.jpg" class="gallery-img" alt="أعمال المظلات والسواتر - كيان البناء" loading="lazy"></a></div>
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/rpbd8DQF/IMG-20260804-WA0026.jpg" data-fancybox="gallery3"><img src="https://i.postimg.cc/rpbd8DQF/IMG-20260804-WA0026.jpg" class="gallery-img" alt="أعمال المظلات والسواتر - كيان البناء" loading="lazy"></a></div>
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/jj9WsDZC/IMG-20260804-WA0028.jpg" data-fancybox="gallery3"><img src="https://i.postimg.cc/jj9WsDZC/IMG-20260804-WA0028.jpg" class="gallery-img" alt="أعمال المظلات والسواتر - كيان البناء" loading="lazy"></a></div>
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/tg7ZQ3tX/IMG-20260804-WA0029.jpg" data-fancybox="gallery3"><img src="https://i.postimg.cc/tg7ZQ3tX/IMG-20260804-WA0029.jpg" class="gallery-img" alt="أعمال المظلات والسواتر - كيان البناء" loading="lazy"></a></div>
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/FKqf9YD3/IMG-20260804-WA0030.jpg" data-fancybox="gallery3"><img src="https://i.postimg.cc/FKqf9YD3/IMG-20260804-WA0030.jpg" class="gallery-img" alt="أعمال المظلات والسواتر - كيان البناء" loading="lazy"></a></div>
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/N0L9q67f/IMG-20260804-WA0033.jpg" data-fancybox="gallery3"><img src="https://i.postimg.cc/N0L9q67f/IMG-20260804-WA0033.jpg" class="gallery-img" alt="أعمال المظلات والسواتر - كيان البناء" loading="lazy"></a></div>
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/TPSyRKCL/IMG-20260804-WA0034.jpg" data-fancybox="gallery3"><img src="https://i.postimg.cc/TPSyRKCL/IMG-20260804-WA0034.jpg" class="gallery-img" alt="أعمال المظلات والسواتر - كيان البناء" loading="lazy"></a></div>
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/KYVKZ1JR/IMG-20260804-WA0035.jpg" data-fancybox="gallery3"><img src="https://i.postimg.cc/KYVKZ1JR/IMG-20260804-WA0035.jpg" class="gallery-img" alt="أعمال المظلات والسواتر - كيان البناء" loading="lazy"></a></div>
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/rpbd8DQp/IMG-20260804-WA0036.jpg" data-fancybox="gallery3"><img src="https://i.postimg.cc/rpbd8DQp/IMG-20260804-WA0036.jpg" class="gallery-img" alt="أعمال المظلات والسواتر - كيان البناء" loading="lazy"></a></div>
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/nLMjb4YF/IMG-20260804-WA0037.jpg" data-fancybox="gallery3"><img src="https://i.postimg.cc/nLMjb4YF/IMG-20260804-WA0037.jpg" class="gallery-img" alt="أعمال المظلات والسواتر - كيان البناء" loading="lazy"></a></div>
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/6QT2JrLy/IMG-20260804-WA0038.jpg" data-fancybox="gallery3"><img src="https://i.postimg.cc/6QT2JrLy/IMG-20260804-WA0038.jpg" class="gallery-img" alt="أعمال المظلات والسواتر - كيان البناء" loading="lazy"></a></div>
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/HLKJprB0/IMG-20260804-WA0039.jpg" data-fancybox="gallery3"><img src="https://i.postimg.cc/HLKJprB0/IMG-20260804-WA0039.jpg" class="gallery-img" alt="أعمال المظلات والسواتر - كيان البناء" loading="lazy"></a></div>
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/s21QdYP6/IMG-20260804-WA0041.jpg" data-fancybox="gallery3"><img src="https://i.postimg.cc/s21QdYP6/IMG-20260804-WA0041.jpg" class="gallery-img" alt="أعمال المظلات والسواتر - كيان البناء" loading="lazy"></a></div>
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/HLKJprBw/IMG-20260804-WA0042.jpg" data-fancybox="gallery3"><img src="https://i.postimg.cc/HLKJprBw/IMG-20260804-WA0042.jpg" class="gallery-img" alt="أعمال المظلات والسواتر - كيان البناء" loading="lazy"></a></div>
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/1z4nhGcX/IMG-20260804-WA0043.jpg" data-fancybox="gallery3"><img src="https://i.postimg.cc/1z4nhGcX/IMG-20260804-WA0043.jpg" class="gallery-img" alt="أعمال المظلات والسواتر - كيان البناء" loading="lazy"></a></div>
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/BvtL9TcJ/IMG-20260804-WA0044.jpg" data-fancybox="gallery3"><img src="https://i.postimg.cc/BvtL9TcJ/IMG-20260804-WA0044.jpg" class="gallery-img" alt="أعمال المظلات والسواتر - كيان البناء" loading="lazy"></a></div>
+                                    <div class="col-6 col-md-4 col-lg-3"><a href="https://i.postimg.cc/d0DkP2mw/IMG-20260804-WA0045.jpg" data-fancybox="gallery3"><img src="https://i.postimg.cc/d0DkP2mw/IMG-20260804-WA0045.jpg" class="gallery-img" alt="أعمال المظلات والسواتر - كيان البناء" loading="lazy"></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- القسم الثالث: للتواصل معنا -->
+            <div class="tab-pane fade" id="contact" role="tabpanel">
+                <section class="contact-section">
+                    <h2 class="section-title">للتواصل معنا</h2>
+                    
+                    <div class="row justify-content-center">
+                        <div class="col-md-8 col-lg-6">
+                            <div class="contact-info">
+                                <p class="mb-1">للاتصال والاستشارة:</p>
+                                <a href="tel:+966507077861" class="text-white text-decoration-none h4" dir="ltr">+966 50 707 7861</a>
+                                <br>
+                                <a href="https://wa.me/966507077861" target="_blank" rel="noopener noreferrer" class="whatsapp-link">
+                                    <i class="fa-brands fa-whatsapp"></i> واتساب
+                                </a>
+                            </div>
+                            
+                            <div class="card bg-light text-dark p-4" style="border-radius: 15px; border: none;">
+                                <h5 class="text-center mb-4 font-weight-bold">للطلب والاستفسار:</h5>
+                                <form id="waForm" onsubmit="sendToWhatsApp(event)">
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control" id="customerName" placeholder="الاسم الكريم" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <textarea class="form-control" id="customerMessage" rows="4" placeholder="اكتب طلبك أو استفسارك هنا..." required></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-whatsapp">
+                                        <i class="fa-solid fa-paper-plane me-2"></i> إرسال الطلب عبر واتساب
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- نافذة منبثقة (Modal) لاختيار طريقة التواصل مع المطورين -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content text-center" style="border-radius: 15px;">
+                <div class="modal-header border-0 pb-0 justify-content-center position-relative">
+                    <h5 class="modal-title fw-bold" id="contactModalLabel">اختر طريقة التواصل</h5>
+                    <button type="button" class="btn-close position-absolute start-0 ms-3 m-0" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                </div>
+                <div class="modal-body pt-2 pb-4">
+                    <p id="modalPhoneNumber" class="text-muted mb-3 fs-5" dir="ltr"></p>
+                    <div class="d-grid gap-3">
+                        <a href="#" id="modalCallBtn" class="btn modal-call-btn btn-lg fw-bold rounded-pill">
+                            <i class="fa-solid fa-phone me-2"></i> اتصال
+                        </a>
+                        <a href="#" id="modalWhatsAppBtn" class="btn btn-whatsapp btn-lg fw-bold rounded-pill" target="_blank">
+                            <i class="fa-brands fa-whatsapp me-2"></i> واتساب
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- أيقونة واتساب عائمة -->
+    <a href="https://wa.me/966507077861" class="floating-whatsapp" target="_blank" rel="noopener noreferrer">
+        <img src="https://i.postimg.cc/BQzPFMZW/4fad1deddea3050bb5e2d6a96b27bbc13af83afd7504c107ea40e9b404c42e11-600.jpg" alt="تواصل معنا عبر واتساب">
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <p class="mb-1">جميع الحقوق محفوظة &copy; شركة كيان البناء 2026</p>
+        
+        <!-- قسم حقوق التصميم والبرمجة -->
+        <div class="developer-credits">
+            <p class="mb-1">تصميم وتطوير المهندسان:</p>
+            <p class="mb-1"><span>هيثم العواضي</span></p>
+            <p class="mb-1"><span>جبران القحوم</span></p>
+            
+            <p class="mb-1">للتواصل : 
+                <!-- الأرقام تفتح النافذة المنبثقة Modal -->
+                <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal" data-phone="967784235912">784235912</a> - 
+                <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal" data-phone="967770607766">770607766</a> - 
+                <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal" data-phone="967776272718">776272718</a>
+            </p>
+            
+            <p class="mb-1">
+                <i class="fa-brands fa-instagram social-icon"></i> انستقرام : 
+                <a href="https://www.instagram.com/x9._q" target="_blank">@x9._q</a> - 
+                <a href="https://www.instagram.com/x7rz.f" target="_blank">@x7rz.f</a>
+            </p>
+            
+            <p class="mb-0">
+                <i class="fa-brands fa-snapchat social-icon text-warning"></i> سناب : 
+                <a href="https://www.snapchat.com/add/hit.54" target="_blank">hit.54</a> - 
+                <a href="https://www.snapchat.com/add/x7rzf" target="_blank">x7rzf</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Fancybox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+    <script>
+        // تفعيل مكتبة تكبير الصور
+        Fancybox.bind("[data-fancybox]", {});
+
+        // إرسال الطلب لشركة كيان البناء مع التحقق من صحة المدخلات
+        function sendToWhatsApp(event) {
+            event.preventDefault(); 
+            // دالة trim() تمسح المسافات الفارغة الزائدة
+            let name = document.getElementById('customerName').value.trim();
+            let message = document.getElementById('customerMessage').value.trim();
+            let phoneNumber = "966507077861"; 
+            
+            // التحقق من أن المستخدم لم يكتب مسافات فارغة فقط
+            if(name === "" || message === "") {
+                alert("يرجى تعبئة الاسم والطلب بشكل صحيح ولا تكتفي بالمسافات الفارغة.");
+                return;
+            }
+
+            let fullMessage = "مرحباً، أنا " + name + "\n" + "الطلب/الاستفسار:\n" + message;
+            let encodedMessage = encodeURIComponent(fullMessage);
+            let whatsappURL = "https://wa.me/" + phoneNumber + "?text=" + encodedMessage;
+            
+            window.open(whatsappURL, '_blank', 'noopener,noreferrer');
+        }
+
+        // تحسين التمرير بين الأقسام والتمرير لأعلى الصفحة تلقائياً
+        document.addEventListener("DOMContentLoaded", function() {
+            var tabElements = document.querySelectorAll('button[data-bs-toggle="pill"]');
+            tabElements.forEach(function(tab) {
+                tab.addEventListener('shown.bs.tab', function (event) {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // منطق النافذة المنبثقة (Modal) لأرقام التواصل الخاصة بالمطورين
+            var contactModal = document.getElementById('contactModal');
+            if (contactModal) {
+                contactModal.addEventListener('show.bs.modal', function (event) {
+                    var button = event.relatedTarget; 
+                    var rawPhone = button.getAttribute('data-phone'); 
+                    var displayPhone = button.innerText; 
+                    
+                    // رسالة افتراضية احترافية عند التواصل معكم كمهندسين
+                    var devMessage = encodeURIComponent("مرحباً مهندس، لدي استفسار بخصوص تصميم وبرمجة المواقع.");
+
+                    document.getElementById('modalPhoneNumber').innerText = displayPhone;
+                    document.getElementById('modalCallBtn').href = 'tel:+' + rawPhone;
+                    document.getElementById('modalWhatsAppBtn').href = 'https://wa.me/' + rawPhone + '?text=' + devMessage;
+                });
+            }
+        });
+    </script>
+</body>
+</html>
